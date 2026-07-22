@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EmperoReal — Football Talent & Media</title>
+<meta name="description" content="EmperoReal is a football talent and media hub — helping players get discovered and helping creators grow, all in one place.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ GATE (shown before entering the site) ============ -->
+<div class="gate" id="gate">
+  <div class="gate__glow" aria-hidden="true"></div>
+  <div class="gate__lines" aria-hidden="true">
+    <svg viewBox="0 0 400 400" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+      <circle cx="200" cy="200" r="70" fill="none" stroke="currentColor" stroke-width="1"/>
+      <line x1="0" y1="200" x2="400" y2="200" stroke="currentColor" stroke-width="1"/>
+      <circle cx="200" cy="200" r="2.5" fill="currentColor"/>
+    </svg>
+  </div>
+
+  <div class="gate__content">
+    <p class="eyebrow">Before you walk out</p>
+    <h1 class="gate__title">The tunnel<br>opens for<br>subscribers.</h1>
+    <p class="gate__body">
+      EmperoReal runs alongside our YouTube channel — that's where matchday
+      breakdowns, scouting clips and creator tips go out first. Subscribe there,
+      then come back and step onto the pitch.
+    </p>
+
+    <ol class="gate__steps">
+      <li class="gate__step" data-step="1">
+        <span class="gate__step-index">01</span>
+        <div>
+          <p class="gate__step-title">Subscribe on YouTube</p>
+          <p class="gate__step-copy">Opens in a new tab. Hit the bell too if you don't want to miss a drop.</p>
+        </div>
+        <a class="btn btn--primary" id="subscribeBtn"
+           href="https://www.youtube.com/channel/UCEkxk8DMzmjtTJ3WmI_73VQ?sub_confirmation=1"
+           target="_blank" rel="noopener">Subscribe</a>
+      </li>
+      <li class="gate__step" data-step="2">
+        <span class="gate__step-index">02</span>
+        <div>
+          <p class="gate__step-title">Confirm and enter</p>
+          <p class="gate__step-copy">We work on an honour system — no logins, no tracking your account.</p>
+        </div>
+        <button class="btn btn--ghost" id="enterBtn" disabled>Enter EmperoReal</button>
+      </li>
+    </ol>
+
+    <p class="gate__note" id="gateNote">Tap "Subscribe" first to unlock entry.</p>
+  </div>
+</div>
+
+<!-- ============ SITE (hidden until unlocked) ============ -->
+<div class="site" id="site" hidden>
+
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#top">Empero<span>Real</span></a>
+    <nav class="nav__links">
+      <a href="#pathways">Pathways</a>
+      <a href="#watch">Watch</a>
+      <a href="#squad">Community</a>
+      <a href="#join">Get help</a>
+    </nav>
+    <a class="btn btn--small" href="https://www.youtube.com/channel/UCEkxk8DMzmjtTJ3WmI_73VQ" target="_blank" rel="noopener">Channel</a>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__field" aria-hidden="true"></div>
+      <p class="eyebrow eyebrow--light">Football talent &amp; media</p>
+      <h1 class="hero__title">
+        Everyone starts<br>on the touchline.
+      </h1>
+      <p class="hero__lede">
+        EmperoReal is where football talent gets seen and football creators get built —
+        one clip, one pathway, one channel at a time.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#join">Find your pathway</a>
+        <a class="btn btn--outline" href="#watch">Watch the latest</a>
+      </div>
+
+      <dl class="hero__stats">
+        <div><dt>Focus areas</dt><dd>4</dd></div>
+        <div><dt>Where we live</dt><dd>YouTube</dd></div>
+        <div><dt>Cost to join</dt><dd>Free</dd></div>
+      </dl>
+    </section>
+
+    <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+    <!-- PATHWAYS / HELP AREAS -->
+    <section class="pathways" id="pathways">
+      <p class="eyebrow">Pick your position</p>
+      <h2 class="section-title">Four ways EmperoReal helps</h2>
+      <p class="section-lede">
+        Every player and every creator fits somewhere on the sheet. Find the role
+        that matches what you're trying to build.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <span class="tag">FWD</span>
+          <h3>Talent Pathway</h3>
+          <p>
+            Get your playing footage in front of people who can actually move
+            you forward — trial info, scouting tips, and honest feedback on
+            your clips.
+          </p>
+          <a class="card__link" href="#join">Submit your footage →</a>
+        </article>
+
+        <article class="card">
+          <span class="tag">WNG</span>
+          <h3>Creator Lab</h3>
+          <p>
+            Building a football channel of your own? Learn editing, thumbnails,
+            growth tactics and how to turn match-day content into a real
+            audience.
+          </p>
+          <a class="card__link" href="#join">Grow your channel →</a>
+        </article>
+
+        <article class="card">
+          <span class="tag">MID</span>
+          <h3>Coaching &amp; Tactics</h3>
+          <p>
+            Breakdown videos, drill libraries and tactical explainers for
+            players and coaches who want to understand the game, not just
+            play it.
+          </p>
+          <a class="card__link" href="#watch">Watch a breakdown →</a>
+        </article>
+
+        <article class="card">
+          <span class="tag">DEF</span>
+          <h3>The Community</h3>
+          <p>
+            A backbone of players, creators and fans trading advice, sharing
+            opportunities, and holding each other accountable.
+          </p>
+          <a class="card__link" href="#squad">Join the squad →</a>
+        </article>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+    <!-- WATCH -->
+    <section class="watch" id="watch">
+      <p class="eyebrow">On the channel</p>
+      <h2 class="section-title">Watch and learn</h2>
+      <p class="section-lede">
+        New uploads land on the EmperoReal YouTube channel first — scouting
+        diaries, tactics breakdowns, and creator behind-the-scenes.
+      </p>
+
+      <div class="watch__panel">
+        <div class="watch__thumb" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="56" height="56"><polygon points="24,18 48,32 24,46" fill="currentColor"/></svg>
+        </div>
+        <div class="watch__copy">
+          <p class="watch__label">Latest uploads</p>
+          <p>
+            Subscribe to catch every video the day it drops, including
+            scouting call-outs when we're actively looking at new talent.
+          </p>
+          <a class="btn btn--outline" href="https://www.youtube.com/channel/UCEkxk8DMzmjtTJ3WmI_73VQ/videos" target="_blank" rel="noopener">
+            Open the channel
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+    <!-- COMMUNITY -->
+    <section class="squad" id="squad">
+      <p class="eyebrow eyebrow--light">The dressing room</p>
+      <h2 class="section-title section-title--light">You don't do this alone</h2>
+      <p class="section-lede section-lede--light">
+        Every player who's made it and every creator who's grown a channel had
+        people around them first. That's what EmperoReal is building — on and
+        off the pitch.
+      </p>
+      <div class="squad__grid">
+        <div><span class="mono">01</span><p>Share your clips and get real feedback, not just likes.</p></div>
+        <div><span class="mono">02</span><p>Ask questions about trials, agents, and next steps.</p></div>
+        <div><span class="mono">03</span><p>Trade editing and growth tips with other creators.</p></div>
+      </div>
+    </section>
+
+    <!-- JOIN / CONTACT -->
+    <section class="join" id="join">
+      <p class="eyebrow">Get help</p>
+      <h2 class="section-title">Tell us where you play</h2>
+      <p class="section-lede">
+        Fill this in and we'll point you to the right pathway — talent,
+        creator, coaching, or just a place in the community.
+      </p>
+
+      <form class="form" id="joinForm">
+        <label>
+          Your name
+          <input type="text" name="name" required placeholder="Full name">
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required placeholder="you@email.com">
+        </label>
+        <label>
+          Where do you need help?
+          <select name="area">
+            <option value="talent">Talent Pathway — I play</option>
+            <option value="creator">Creator Lab — I make content</option>
+            <option value="coaching">Coaching &amp; Tactics</option>
+            <option value="community">Just here for the community</option>
+          </select>
+        </label>
+        <label>
+          Tell us more
+          <textarea name="details" rows="4" placeholder="Position, footage links, channel links — whatever's relevant"></textarea>
+        </label>
+        <button type="submit" class="btn btn--primary">Send it in</button>
+        <p class="form__note" id="formNote" role="status"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <a class="nav__brand nav__brand--footer" href="#top">Empero<span>Real</span></a>
+    <p>Football talent &amp; media, built one clip at a time.</p>
+    <a href="https://www.youtube.com/channel/UCEkxk8DMzmjtTJ3WmI_73VQ" target="_blank" rel="noopener">YouTube</a>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
